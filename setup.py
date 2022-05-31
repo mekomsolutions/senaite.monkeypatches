@@ -15,7 +15,7 @@ long_description = '\n\n'.join([
 setup(
     name='senaite.monkeypatches',
     version='1.0a1',
-    description="An add-on providing monkey patches to customize SENAITE",
+    description="An add-on to customize SENAITE",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
@@ -54,6 +54,8 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'senaite.core',
+        'collective.monkeypatcher',
     ],
     extras_require={
         'test': [

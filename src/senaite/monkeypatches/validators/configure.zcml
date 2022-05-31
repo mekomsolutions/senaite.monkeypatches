@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
+    i18n_domain="senaite.monkeypatches">
+
+    <monkey:patch
+        description="This works around issue https://github.com/senaite/senaite.core/pull/1957"
+        class="bika.lims.validators.ResultOptionsValueValidator"
+        original="__call__"
+        replacement=".validators.patchedResultOptionsValueValidatorCall"
+        />
+
+</configure>
