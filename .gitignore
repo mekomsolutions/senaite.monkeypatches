@@ -27,7 +27,7 @@ log.html
 output.xml
 pip-selfcheck.json
 report.html
-# .vscode/
+.vscode/
 .tox/
 reports/
 # excludes
