@@ -1,38 +1,27 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
 
 =====================
 senaite.monkeypatches
 =====================
 
-Tell me what your product does
+This is an add-on that provides monkey patches to override/customize existing senaite.core package api at runtime. 
 
 Features
 --------
 
-- Can be bullet points
+- This add-on makes use of the collective.monkeypatches package in overriding/customizing SENAITE functionality.
 
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+This add-on can be seen in action in the following contained files; [validators.py](src/senaite/monkeypatches/validators/validators.py) with [configure.zcml](src/senaite/monkeypatches/validators/configure.zcml), [__init__.py](src/senaite/monkeypatches/content/__init__.py).
 
+Function calls are patched using the monkeypatches package as can be seen in the `configure.zcml` file, where as variables/constants are patched within the `__init__.py` file. The patches are conventionally organised in packages named relative/simillar to package names of their existing unpatched methods and variables.
 
-Documentation
--------------
+All packages required at runtime are registered in the root [configure.zcml](src/senaite/monkeypatches/configure.zcml) file.
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+For further information please refer to the [collective.monkeypatcher](https://github.com/plone/collective.monkeypatcher/blob/master/README.rst) documentation for detailed usage of the package.
 
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
 
 
 Installation
@@ -54,19 +43,11 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/senaite.monkeypatches/issues
-- Source Code: https://github.com/collective/senaite.monkeypatches
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/mekomsolutions/senaite.monkeypatches/issues
+- Source Code: https://github.com/mekomsolutions/senaite.monkeypatches
 
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
-
-License
--------
-
-The project is licensed under the GPLv2.
+If you are having issues, please let us know by reportig it in the issues section of this project.
