@@ -11,7 +11,7 @@ from bika.lims.utils import t as _t
 
 
 def patchedResultOptionsValueValidatorCall(self, value, *args, **kwargs):
-    # Result Value must be floatable
+    # Result Value must be floatable or alpha numeric
     if not api.is_floatable(value):
         if not re.compile("[a-zA-Z0-9\\-]{32,36}$").match(value):
             return _t(_("Result Value must be a number or alpha-numeric of max 36 characters"))
