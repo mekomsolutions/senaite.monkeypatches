@@ -1,0 +1,5 @@
+=====================
+senaite.monkeypatches
+=====================
+
+User documentation
