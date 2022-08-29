@@ -16,6 +16,7 @@
   <include package=".browser" />
   <include package=".content" />
   <include package=".validators" />
+   <include package=".core" />
 
   <include file="permissions.zcml" />
 

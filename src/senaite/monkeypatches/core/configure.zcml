@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
+    i18n_domain="senaite.monkeypatches">
+    <monkey:patch
+        description="This works around issue where Senaite defaults to using username/password for authentication preventing the use of custome plone auth plugins"
+        class="senaite.core.browser.frontpage.frontpage.FrontPageView"
+        original="__call__"
+        replacement=".frontpage.FrontPageView"
+    />
+
+</configure>
