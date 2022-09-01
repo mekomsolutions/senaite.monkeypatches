@@ -27,6 +27,7 @@ List of all packaged patches
 * `bika.lims.content.abstractbaseanalysis.ResultOptions` replacement with a different variable/config that allows for greater field `maxlength` and `size` of the `ResultValue` field for the `ResultOptions` widget.
 * `bika.lims.content.abstractbaseanalysis.schema` updation with the new `ResultOptions` config.
 * `bika.lims.validators.ResultOptionsValueValidator.__call__()` replacement with a validator function that allows for non-numeric result option values.
+* `senaite.core.browser.frontpage.frontpage.FrontPageView` Changes the way senaite handles authentication. By default it will always redirect to the login page for using username/password. This changes this behaviour so it uses the first available auth plugin which by default is the session plugin (username/password). This then allows us to install a custom plugin and make it the first available plugin replacing the session plugin.
 
 
 
