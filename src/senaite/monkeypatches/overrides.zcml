@@ -1,0 +1,12 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter
+      name="workflow_action_publish"
+      for="*
+           zope.publisher.interfaces.browser.IBrowserRequest"
+      factory="bika.lims.browser.workflow.WorkflowActionGenericAdapter"
+      provides="bika.lims.interfaces.IWorkflowActionAdapter"
+      permission="zope.Public"
+      />
+
+</configure>
