@@ -47,6 +47,21 @@ Install senaite.monkeypatches by adding it to your buildout::
 and then running ``bin/buildout``
 
 
+Sample Active filter
+--------------------
+
+Set the following environment variable on the SENAITE process and restart it
+to exclude verified samples from the Samples page's `Active` filter:
+
+```sh
+SENAITE_SAMPLES_ACTIVE_EXCLUDE_VERIFIED=true
+```
+
+`true`, `1`, `yes`, and `on` enable this option (case-insensitive).
+Unset or any other value preserves the default behavior. Samples in
+`to_be_verified` remain active, and the separate `Verified` filter is unchanged.
+
+
 Contribute
 ----------
 
