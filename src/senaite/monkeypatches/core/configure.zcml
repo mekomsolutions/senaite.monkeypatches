@@ -9,4 +9,11 @@
         replacement=".frontpage.FrontPageView"
     />
 
+    <monkey:patch
+        description="Optionally exclude verified samples from the Active filter in the Samples screen"
+        class="senaite.core.browser.samples.view.SamplesView"
+        original="__init__"
+        replacement=".samples.samples_init"
+    />
+
 </configure>
